@@ -1,0 +1,222 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+*{padding: 0;margin: 0;}
+html {
+	margin: 0;
+	padding: 0;
+	}
+body { 
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	background: #efefef;
+	margin: 0; 
+	padding: 0;
+	}
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+.p-box{
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding:40px;
+  font-size: 20px;
+  background-color: white;
+  -webkit-box-shadow:0 0 10px #cCC;
+  -moz-box-shadow:0 0 10px #cCC;
+  box-shadow:0 0 10px #cCC;
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #000000;
+  
+}
+
+h3 { 
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 3px; 
+	margin-bottom: 0; 
+	color: #000000;
+  margin-top:10px;
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #B7A5DF;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #9685BA;
+	}
+abbr {
+	border-bottom: none;
+	}
+
+
+/* specific divs */
+.page-wrapper { 
+	/* background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left;  */
+	padding: 80px 175px 0 110px;  
+	margin: 0; 
+	position: relative;
+	}
+
+.intro { 
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+	}
+
+header h1 { 
+	/* background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left; */
+	/* margin-top: 10px; */
+	display: block;
+	width: 100%;
+	height: 87px;
+	float: left;
+  font-size: 20px;
+	text-indent: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  background-image: linear-gradient(to right, red , yellow);
+  color: #fff;
+  padding-left: 60px;
+	}
+header h2 { 
+	/* background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left;  */
+	margin-top: 58px; 
+	margin-bottom: 40px; 
+	width: 200px; 
+	height: 18px; 
+	float: right;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+  display: none;
+	}
+header {
+	padding-top: 20px;
+	height: 87px;
+}
+
+.summary {
+	clear: both; 
+	margin: 20px 20px 20px 10px; 
+	width: 160px; 
+	float: left;
+	}
+.summary p {
+	font: italic 1.1em/2.2 georgia; 
+	text-align: center;
+	}
+
+.preamble {
+	clear: right; 
+	padding: 0px 10px 0 10px;
+	}
+.supporting {	
+	padding-left: 10px; 
+	margin-bottom: 40px;
+	}
+
+footer { 
+	text-align: center; 
+	}
+footer a:link, footer a:visited { 
+	margin-right: 20px; 
+	}
+
+.sidebar {
+	margin-left: 600px; 
+	position: fixed; 
+	top: 0; 
+	right: 0;
+	}
+  
+.sidebar .wrapper { 
+	font: 10px verdana, sans-serif; 
+	background: #fff;
+	padding: 10px; 
+	margin-top: 150px; 
+	width: 130px; 
+  border-radius: 10px;
+  color: #bd7986;
+
+	}
+.sidebar h3.select { 
+	background: #fff;
+	margin: 10px 0 5px 0; 
+	width: 97px; 
+	height: 16px; 
+  color: #bd7986;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.archives { 
+	background: #fff;
+	margin: 25px 0 5px 0; 
+	width:57px; 
+	height: 14px; 
+  color: #bd7986;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+.sidebar h3.resources { 
+	background: #fff;
+	margin: 25px 0 5px 0; 
+	width:63px; 
+	height: 10px; 
+  color: #bd7986;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+
+
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	}
+.sidebar li {
+	line-height: 1.3em; 
+	background: #fff;
+	display: block; 
+	padding-top: 5px; 
+	margin-bottom: 5px;
+	list-style-type: none;
+	}
+.sidebar li a:link {
+	color: #988F5E;
+	}
+.sidebar li a:visited {
+	color: #B3AE94;
+	}
+
+
+.extra1 {
+	background: #fff;
+	position: absolute; 
+	top: 40px; 
+	right: 0; 
+	width: 148px; 
+	height: 110px;
+	}
