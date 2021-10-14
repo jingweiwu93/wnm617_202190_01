@@ -154,7 +154,8 @@ a{
 .form-control {
 	margin: 1em 0;
 }
-.form-input {
+
+.signin-form .form-input {
 	width: 90%;
 	display: inline-block;
 	border: 1px solid var(--color-neutral-medium);
@@ -164,6 +165,20 @@ a{
 	outline: 0;
 	font: inherit;
 }
+
+.form-input {
+	width: 90%;
+	display: inline-block;
+	border-width: 0;
+	border: 1px solid var(--color-neutral-medium);
+	margin: 0;
+	padding: 0.5em 1em;
+	border-radius: 0.3em;
+	outline: 0;
+	background-color: transparent;
+	font: inherit;  
+}
+
 
 .form .form-button,
 .form-button {
@@ -180,7 +195,10 @@ a{
 	curson: pointer;
 	text-decoration: none;
 }
-.form-label {
+.ui-mobile .form-label {
+	font-size: 0.8em;
+	color: var(--color-neutral-medium);
+	margin: 1rem 0 0;
 
 }
 

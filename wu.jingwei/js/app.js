@@ -15,6 +15,10 @@ $(()=>{
 		checkSigninForm();
 
 	})
+	.on("submit","#list-add-form",function(e){
+		e.preventDefault();
+	})
+
 
 
 

@@ -22,7 +22,7 @@
 	<section data-role="page" id="page-signin">
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="flex-stretch"></div>
-			<form data-ajax="false" class="form" id="signin-form" style="padding:10px">
+			<form data-ajax="false" class="form signin-form" id="signin-form" style="padding:10px">
 				<div class="form-control">
 					<input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Username">
 				</div>
@@ -45,7 +45,7 @@
   <section data-role="page" id="page-signup">
     <div data-role="main" class="display-flex flex-vertical">
       <div class="flex-stretch"></div>
-      <form data-ajax="false" class="form" id="signup-form" style="padding:10px">
+      <form data-ajax="false" class="form signin-form" id="signup-form" style="padding:10px">
         <div class="form-control">
           <label for="signup-email" class="form-label">Email Address</label>
           <input class="form-input" type="text" id="signup-email" data-role="none" placeholder="Email">
@@ -77,7 +77,7 @@
 		</div>
 		<footer data-role="footer">
 			<ul>
-				<li><a href="#page-recent">Recent</a></li>
+				<li><a href="#page-recentwe">Recent</a></li>
 				<li><a href="#page-list">List</a></li>
 				<li><a href="#page-user-profile">Profile</a></li>
 			</ul>
@@ -168,9 +168,24 @@
     <div class="modal" id="list-add-modal">
       <div class="modal-back" data-deactivate="#list-add-modal"></div>
       <form class="modal-popup form" id="list-add-form" data-ajax="false">
-        <div class="modal-head">head</div>
-        <div class="modal-body">body</div>
-        <div class="modal-foot">foot</div>
+        <div class="modal-head">Add Animal</div>
+        <div class="modal-body">
+          <div class="form-control">
+            <label for="list-add-name" class="form-label">Name</label>
+            <input type="text" id="list-add-name" class="form-input" data-role="none" placeholder="Name">
+          </div>
+          <div class="form-control">
+            <label for="list-add-name" class="form-label">Type</label>
+            <input type="text" id="list-add-type" class="form-input" data-role="none" placeholder="Name">
+          </div>
+          <div class="form-control">
+            <label for="list-add-name" class="form-label">Breed</label>
+            <input type="text" id="list-add-breed" class="form-input" data-role="none" placeholder="Name">
+          </div>
+        </div>
+        <div class="modal-foot">
+          <button type="submit" class="form-button">Save</button>
+        </div>
       </form>
     </div>
 	</section>

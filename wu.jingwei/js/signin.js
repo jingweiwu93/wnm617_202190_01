@@ -30,7 +30,7 @@ const checkUserId = () => {
 	} else {
 		//logged in
 		if(p.some(o=>window.location.hash===o))
-			$.mobile.navigate("#page-map");
+			$.mobile.navigate("#page-recent");
 	}
 }
 
