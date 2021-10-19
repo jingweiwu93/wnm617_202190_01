@@ -73,6 +73,11 @@ a{
 .overscroll-y { overflow-y: auto; }
 
 
+.fill-parent {
+	height: 100%;
+	width: 100%;
+}
+
 .centered { text-align: center; }
 .small { font-size: 0.8em; }
 
@@ -94,11 +99,13 @@ a{
 	position: fixed;
 	top: 0;
 	left: 0;
+	overflow: hidden;
 }
 
 [data-role="main"]{
 	flex: 1 1 100%;
 	position: relative;
+	overflow: hidden;
 }
 [data-role="header"],
 [data-role="footer"] {
@@ -118,6 +125,7 @@ a{
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	position: relative;
 }
 
 
@@ -170,13 +178,14 @@ a{
 	width: 90%;
 	display: inline-block;
 	border-width: 0;
-	border: 1px solid var(--color-neutral-medium);
+	border-bottom: 1px solid var(--color-neutral-medium);
 	margin: 0;
 	padding: 0.5em 1em;
-	border-radius: 0.3em;
+	/*border-radius: 0.3em;*/
 	outline: 0;
 	background-color: transparent;
 	font: inherit;  
+	-webkit-appearance: none;
 }
 
 
@@ -185,6 +194,7 @@ a{
 	width: 100%;
 	display: inline-block;
 	border-width: 0;
+	color: inherit;
 	background-color: var(--color-main-light);
 	margin: 0;
 	padding: 0.5em 1em;
@@ -192,7 +202,7 @@ a{
 	outline: 0;
 	font: inherit;
 	text-align: center;
-	curson: pointer;
+	cursor: pointer;
 	text-decoration: none;
 }
 .ui-mobile .form-label {
@@ -219,11 +229,11 @@ a{
 
 
 /* Floater */
-/*.floater { position: absolute; }*/
-.floater .left { left: 1 em; }
-.floater .right { right: 1 em; }
-.floater .top { top: 1 em; }
-.floater .bottom { bottom: 1 em; }
+.floater { position: absolute; }
+.floater.left { left: 1em; }
+.floater.right { right: 1em; }
+.floater.top { top: 1em; }
+.floater.bottom { bottom: 1em; }
 
 
 /* Circle Button */
@@ -279,6 +289,7 @@ a{
 	border-radius: 5px;
 	width: 80vmin;
 	overflow: hidden;
+	transition: all 0.3s;
 
 }
 
@@ -301,6 +312,65 @@ a{
 	transform: translate(-50%,-50%);
 
 }
+
+
+
+
+/* MODAL Drawer */
+.modal-drawer {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.3s;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.modal-drawer.left,
+.modal-drawer.right {
+	height: 100%;
+	width: 70vw;
+}
+
+.modal-drawer.left { left: 0; transform:translateX(-100%); }
+.modal-drawer.right { right: 0; transform:translateX(100%); }
+
+
+.modal-drawer.top,
+.modal-drawer.bottom {
+	height: 40vh;
+	width: 100%;
+}
+
+.modal-drawer.top { top: 0; transform:translateY(-100%); }
+.modal-drawer.bottom { bottom: 0; transform:translateY(100%); }
+
+.modal.active .modal-drawer {
+	transform: translate(0);
+}
+
+
+
+.modal-drawer .modal-body {
+	flex: 1 1 100%;
+}
+
+
+
+
+
+
+.icon {
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+}
+
+
+
+
+
 
 
 
