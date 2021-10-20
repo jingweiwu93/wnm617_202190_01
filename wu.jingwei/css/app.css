@@ -17,10 +17,6 @@
 	--color-offwhite: #f4f4f4;
 
 
-	--font-sans: Helvetic, Arial, sans-serif;
-	--font-serif: Georgia, Cambria, serif;
-
-
 	--header-height: 3rem;
 	--spacing: 1rem;
 
@@ -73,6 +69,9 @@ a{
 .overscroll-y { overflow-y: auto; }
 
 
+.position-relative { position:relative; }
+.position-absolute { position:absolute; }
+
 .fill-parent {
 	height: 100%;
 	width: 100%;
@@ -81,7 +80,9 @@ a{
 .centered { text-align: center; }
 .small { font-size: 0.8em; }
 
-
+.padding-sm { padding:0.5em; }
+.padding-md { padding: 1em; }
+.padding-lg { padding: 2em; }
 
 
 
@@ -204,6 +205,7 @@ a{
 	text-align: center;
 	cursor: pointer;
 	text-decoration: none;
+	-webkit-appearance: none;
 }
 .ui-mobile .form-label {
 	font-size: 0.8em;
@@ -226,6 +228,25 @@ a{
 	background-size: cover;
 	background-position: center;
 }
+
+
+/* GENERIC NAV */
+.nav {
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	display: flex;
+}
+
+.nav li {
+	flex: 1 1 auto;
+	padding: 0 1em;
+	text-align: center;
+	line-height: var(--header-height);
+}
+
+
 
 
 /* Floater */
@@ -366,6 +387,140 @@ a{
 	height: 1em;
 	display: inline-block;
 }
+
+
+.nav-icon {
+	display: block;
+	line-height: 2em;
+	font-size: 1.5em;
+}
+
+.nav-icon .icon {
+	vertical-align: middle;
+}
+
+.nav-icon-label {
+	display: block;
+	line-height: 1rem;
+	font-size: 0.7rem;
+}
+
+.nav-icon-set li.active {
+	background-color: var(--color-main-light);
+}
+
+
+/* Animal list */
+
+.animallist {
+	list-style-type: none;
+	margin: 0;
+	padding: 1em;
+}
+
+
+.animallist-item~.animallist-item {
+	margin-top: 1em;
+}
+
+
+.animallist-item a {
+	box-shadow: 0 5px 10px rgb(0, 0, 0 / 15%);
+	border-radius: 1em;
+	overflow: hidden;
+	font-weight: normal;
+}
+
+.animallist-item-image img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	vertical-align: middle;
+}
+
+.animallist-item-description {}
+
+.animallist-item-name {
+	font-size: 1.5em;
+}
+
+.animallist-item-type,
+.animallist-item-breed {
+	font-size: 0.9em;
+}
+
+
+
+
+/* Animal Profile */
+.animal-profile-top {
+	flex: none;
+	height: 40vh;
+}
+
+
+.animal-profile-bottom {
+	flex: 1 1 auto;
+	position: relative;
+}
+
+
+.floating-header {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.15);
+	width: 100%;
+	top: 0;
+	left: 0;
+	box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
