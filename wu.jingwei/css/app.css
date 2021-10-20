@@ -86,7 +86,18 @@ a{
 
 
 
-
+/* RESPONSIVE FLEX LAYOUT */
+ 
+   /* No Wrap */
+/* no wrap */
+      .flex-row-nowrap-start-center{display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center  ; align-items: center ; }
+      .flex-row-nowrap-start-start{display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start  ; align-items: flex-start; }
+      .flex-row-nowrap-end-center{display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-end  ; align-items: center ; }
+      .flex-row-nowrap-end-center{display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-end  ; align-items: flex-end ; }
+      .flex-row-nowrap-end-start{display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-end  ; align-items: flex-start ; }
+      .flex-row-nowrap-between-center{display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between  ; align-items: center ; }
+      .flex-row-nowrap-around-center{display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around  ; align-items: center ; }
+      .flex-row-nowrap-start-stretch{display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start  ; align-items: stretch ; }
 
 
 
@@ -431,23 +442,49 @@ a{
 	font-weight: normal;
 }
 
-.animallist-item-image img {
-	width: 100px;
-	height: 100px;
-	object-fit: cover;
-	vertical-align: middle;
-}
+
 
 .animallist-item-description {}
 
 .animallist-item-name {
-	font-size: 1.5em;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.9em;
+	font-weight: 600;
+	margin-left: 1em;
 }
 
 .animallist-item-type,
 .animallist-item-breed {
 	font-size: 0.9em;
 }
+
+.list-item-container {
+	width: 100%;
+	padding: 1em 1em;
+	background-color: var(--color-medium-light);
+	border-radius: 0;
+}
+
+.animallist-item-image-container img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: var(--color-white);
+	object-fit: cover;
+	vertical-align: middle;
+}
+
+.animal-img-cover {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
 
 
 
@@ -473,6 +510,7 @@ a{
 	left: 0;
 	box-shadow: none;
 }
+
 
 
 

@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="css/app.css">
 
 <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@1&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
 
@@ -324,15 +326,12 @@
    </script>
 
    <script type="text/template" id="animallist-item-template">
-   <a href="#page-animal-profile" class="display-flex">
-      <div class="flex-none animallist-item-image">
-         <img src="https://via.placeholder.com/400x400?text=Animal" alt="">
+   <a href="#page-animal-profile" class="flex-row-nowrap-start-center list-item-container">
+      <div class="flex-none animallist-item-image-container">
+         <img class="animal-img-cover" src="./img/kitty.jpeg" alt="">
       </div>
-      <div class="flex-stretch animallist-item-body padding-md">
-         <div class="animallist-item-name">Animal</div>
-         <div class="animallist-item-type"><strong>Type</strong> Animal</div>
-         <div class="animallist-item-breed"><strong>Breed</strong> Animal</div>
-      </div>
+      <p class="animallist-item-name">Animal Nickname</p>
+  
    </a>
    </script>
 
