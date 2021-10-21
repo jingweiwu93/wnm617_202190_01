@@ -30,8 +30,16 @@
 	
 	<!--Sign in-->
 	<section data-role="page" id="page-signin">
+
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="flex-stretch"></div>
+      <div class="flex-col-center-center">
+        <img src="owl-logo" src="./img/owl-logo.jpeg" alt="logo">
+        <p class="slogan">The Owl</p>
+      </div>
+      <div class="flex-stretch"></div>
+        
+      </div>
 			<form data-ajax="false" class="form signin-form" id="signin-form" style="padding:10px">
 				<div class="form-control">
 					<input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Username">
@@ -86,7 +94,7 @@
 			<div class="map"></div>
 
       <div class="floater" style="top:20%;left:20%;">
-        <a href="#" data-activate="#recent-add-modal"><img src="img/icons/marker.svg" class="icon" style="width:30px;height:30px"></a>
+        <a href="#" data-activate="#recent-add-modal"><img src="./img/icons/map.svg" class="icon" style="width:30px;height:30px"></a>
       </div>
       <div class="floater bottom right">
         <a href="#page-location-choose-animal" class="btn-circle">&plus;</a>
@@ -311,15 +319,15 @@
   <script type="text/template" id="footer-template">
    <ul class="nav-icon-set">
       <li><a href="#page-recent" data-activateone=".nav-icon-set li:nth-child(1)">
-         <span class="nav-icon"><img class="icon" src="img/icons/map.svg"></span>
+         <span class="nav-icon"><img class="icon" src="./img/icons/map.svg"></span>
          <span class="nav-icon-label">Map</span>
       </a></li>
       <li><a href="#page-list" data-activateone=".nav-icon-set li:nth-child(2)">
-         <span class="nav-icon"><img class="icon" src="img/icons/list.svg"></span>
+         <span class="nav-icon"><img class="icon" src="./img/icons/list.svg"></span>
          <span class="nav-icon-label">List</span>
       </a></li>
       <li><a href="#page-user-profile" data-activateone=".nav-icon-set li:nth-child(3)">
-         <span class="nav-icon"><img class="icon" src="img/icons/profile.svg"></span>
+         <span class="nav-icon"><img class="icon" src="./img/icons/profile.svg"></span>
          <span class="nav-icon-label">Profile</span>
       </a></li>
    </ul>
