@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Marissa Singleton",
+    "username": "user1",
+    "email": "user1@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/995/fff/?text=user1",
+    "date_create": "2020-07-07T05:47:32 +07:00"
+  },
+  {
+    "id": 2,
+    "name": "Lakeisha Jarvis",
+    "username": "user2",
+    "email": "user2@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/931/fff/?text=user2",
+    "date_create": "2020-05-12T07:52:28 +07:00"
+  },
+  {
+    "id": 3,
+    "name": "Ward Lane",
+    "username": "user3",
+    "email": "user3@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/747/fff/?text=user3",
+    "date_create": "2021-06-13T05:25:20 +07:00"
+  },
+  {
+    "id": 4,
+    "name": "Marylou Medina",
+    "username": "user4",
+    "email": "user4@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/864/fff/?text=user4",
+    "date_create": "2020-09-14T12:07:45 +07:00"
+  },
+  {
+    "id": 5,
+    "name": "Odessa Holcomb",
+    "username": "user5",
+    "email": "user5@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/909/fff/?text=user5",
+    "date_create": "2020-09-04T03:58:06 +07:00"
+  },
+  {
+    "id": 6,
+    "name": "Marsh Potter",
+    "username": "user6",
+    "email": "user6@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/895/fff/?text=user6",
+    "date_create": "2021-05-05T04:30:56 +07:00"
+  },
+  {
+    "id": 7,
+    "name": "Janelle Stone",
+    "username": "user7",
+    "email": "user7@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/730/fff/?text=user7",
+    "date_create": "2020-02-03T01:10:34 +08:00"
+  },
+  {
+    "id": 8,
+    "name": "Carrie Allen",
+    "username": "user8",
+    "email": "user8@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/823/fff/?text=user8",
+    "date_create": "2020-12-01T06:20:28 +08:00"
+  },
+  {
+    "id": 9,
+    "name": "Delacruz Hawkins",
+    "username": "user9",
+    "email": "user9@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/850/fff/?text=user9",
+    "date_create": "2020-11-10T04:56:50 +08:00"
+  },
+  {
+    "id": 10,
+    "name": "Antoinette Gallegos",
+    "username": "user10",
+    "email": "user10@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/725/fff/?text=user10",
+    "date_create": "2020-02-27T08:03:50 +08:00"
+  }
+]

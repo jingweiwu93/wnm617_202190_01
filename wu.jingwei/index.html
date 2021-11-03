@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Animal Tracker</title>
+	<title>The Owl</title>
 
 
 <!-- Stylesheet -->
@@ -34,7 +34,7 @@
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="flex-stretch"></div>
       <div class="flex-col-center-center">
-        <img src="owl-logo" src="./img/owl-logo.jpeg" alt="logo">
+        <img class="owl-logo" src="./img/logo.png" alt="logo">
         <p class="slogan">The Owl</p>
       </div>
       <div class="flex-stretch"></div>
@@ -201,12 +201,42 @@
 <!--User Profile-->
 
 	<section data-role="page" id="page-user-profile">
-		<div data-role="main"><div class="overscroll">
-			User!
-      <div>
-        <button class="form-button js-logout">Log Out</button>
+		<header class="" data-role="header">
+        <a class="flex-col-center-center back-icon-link" href="#" data-rel="back">
+          <img class="icon-md icon" src="./img/icons/back-arrow.svg" alt="back"></a>
+        <h1 class="profile-page-title">Profile</h1>
+        <div class="flex-col-center-center  profile-more-icon-conainer" data-activate="#profile-more-modal" href="#" >
+          <img class="icon-sm" src="./img/icons/more.svg" alt="more">
+        </div>  
+      </header>
+    <div class="overscroll-x" data-role="main ">
+      <div class="profile-content-container ">
+        <div class="flex-col-center-center profile-image-container display-flex">
+          <div class="profile-image flex-col-center-center">
+            <img class="image-cover" src="img/user-profile.jpeg" alt="profile">
+          </div>
+          
+        <p class="profile-name">Kasey</p>
+        
+        </div>
+        <hr style="border-top: 1px solid  var(--color-neutral-light);">
+        <!--  <a class="flex-row-start-center js-logout"  >
+            <div class="flex-col-center-center">
+              <img class=" icon icon-sm" src="./img/icons/logout.svg" alt="password">
+            </div>
+            <p class="drawer-item-text">Log Out</p>
+          </a>  -->
+          <div class="container">
+          <p class="text-light text-gray"><span style="color: var(--color-main-medium); font-weight: 600;">Email:</span> kasey02@gmail.com</p>
+        </div>
+        <div class="container ">
+          <p class="text-light text-gray"><span style="color: var(--color-main-medium); font-weight: 600;">Member since: </span>2021</p>
+        </div>
+        <div class="container ">
+          <p class="text-light text-gray"><span style="color: var(--color-main-medium); font-weight: 600;">User ID:</span> kc02</p>
+        </div>
       </div>
-		</div>
+    </div>
 		<footer data-role="footer" data-template="#footer-template"></footer>
 	</section>
 
@@ -234,14 +264,14 @@
 
     <header data-role="header" class="floating-header">
       <ul>
-        <li><a href="#" data-rel="back">Back</a></li>
+        <li><a href="#" data-rel="back"><img class="icon-md icon" src="./img/icons/back-arrow.svg" alt="back"></a></li>
       </ul>
     </header>
   </section>
 
   <section data-role="page" id="page-animal-add">
     <header data-role="header">
-      <h1>Add Animal!</h1>
+      <h1>ADD ANIMAL</h1>
       <ul>
         <li><a href="#" data-rel="back">Cancel</a></li>
       </ul>

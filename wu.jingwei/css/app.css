@@ -1,13 +1,13 @@
 
 :root {
-	--color-neutral-light: #eee;
-	--color-neutral-medium: #999;
+	--color-neutral-light: #efce9e;
+	--color-neutral-medium: #C8701A;
 	--color-neutral-dark: #555;
 
 	
-	--color-main-light: #D4CBC7;
-	--color-main-medium: #C2B0A2;
-	--color-main-dark: #74746E; 
+	--color-main-light: #f4a118;
+	--color-main-medium: #C8701A;
+	--color-main-dark: #7A6F44; 
 
 
 	--color-black: #000;
@@ -233,7 +233,12 @@ a{
 
 }
 
+/* Login */
 
+.owl-logo {
+	width: 6em;
+	margin: auto;
+}
 
 
 
@@ -280,7 +285,7 @@ a{
 .btn-circle {
 
 	display: inline-block;
-	background-color: var(--color-white);
+	background-color: var(--color-main-light);
 	width: 3rem;
 	height: 3rem;
 	line-height: 3rem;
@@ -467,9 +472,8 @@ a{
 }
 
 .list-item-container {
-	width: 100%;
 	padding: 1em 1em;
-	background-color: var(--color-medium-light);
+	background-color: var(--color-neutral-light);
 	border-radius: 0;
 }
 
@@ -524,13 +528,42 @@ a{
 
 
 
+/* User Profile */
 
+.profile-more-icon-conainer{
+   height: 100%;
+   min-width: 2em;
+   position: absolute;
+   right: 1em;
+}
 
+.profile-image{
+   border-radius: 50%;
+   background-color: var(--color-neutral-light);
+   object-fit: contain;
+   width: 150px;
+   height: 150px;
+   overflow: hidden;
+}
 
+.profile-back-icon{
+   line-height: 0px;
+}
 
+.profile-content-container{
+   padding-top: 10px;
+}
 
+.image-cover{
+   object-fit: cover;
+   background-repeat: no-repeat;
+   width: 100%;
+}
 
-
+.profile-name{
+   text-align: center;
+   width: 100%;
+}
 
 
 
