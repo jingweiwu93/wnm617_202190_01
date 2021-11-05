@@ -2,10 +2,32 @@
 // DOCUMENT READY
 $(()=>{
 
+/*	query({
+		type:'animals_by_user_id',
+		params:[4]
+	}).then(d=>{
+		console.log(d)
+	})
+*/
+
+
 	checkUserId();
 
 	//Event Delegation
 	$(document)
+
+	.on("pagecontainerbeforeshow",function(event, ui){
+		//page Routing
+		switch(ui.toPage[0].id) {
+			case "page-recent": RecentPage(); break;
+			case "page-list": ListPage(); break;
+			case "page-user-profile": UserProfilePage(); break;
+			case "page-animal-profile": AnimalProfilePage(); break;
+		}
+	})
+
+
+
 
 
 	//FORM SUBMITS
@@ -29,7 +51,11 @@ $(()=>{
 		checkUserId();
 	})
 
-
+	.on("click",".animal-jump",function(e) {
+		if(!$(this).data("id")) throw("No ID on element");
+		sessionStorage.animalId = $(this).data("id");
+		$.mobile.navigate("#page-animal-profile");
+	})
 
 
 
@@ -48,7 +74,6 @@ $(()=>{
 	})
 	.on("click","[data-activateone]",function(e){
 		let target = $(this).data("activateone");
-		console.log(target)
 		$(target).addClass("active").siblings().removeClass('active');
 	});
 
