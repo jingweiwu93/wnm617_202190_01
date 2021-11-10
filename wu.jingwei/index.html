@@ -166,29 +166,24 @@
   </section>
 
   <script>
-    window.onload = function () {
-            var url = "data/animals_data.json"
-            var request = new XMLHttpRequest();
-            request.open("get", url);
-            request.send(null);
-            request.onload = function () {
-                if (request.status == 200) {
-                    var json = JSON.parse(request.responseText);
-                    for(let i=0; i<json.length; i++){
-                      $(".lbox").append('<li class="card">\
-                        <div class="image"><img src="'+json[i].img+'" alt="'+json[i].name+'" width="100%"/></div>\
-                        <div class="text">\
-                          <div class="name">'+json[i].name+'</div>\
-                          <div class="type">'+json[i].type+'</div>\
-                          <div class="decription">'+json[i].decription+'</div>\
-                        </div>\
-                      </li>')
-                    }
-
-                }
-            }
-       }
-
+    $(window).load(async () => {
+      let resp = await fetch("data/animals_data.json");
+      if (!resp.ok) {
+        console.error(resp.statusText);
+        return;
+      }
+      let animals = await resp.json();
+      for(let animal of animals) {
+        $(".lbox").append(`<li class="card">
+          <div class="image"><img src="${animal.img}" alt="${animal.name}" width="100%"/></div>
+          <div class="text">
+            <div class="name">${animal.name}</div>
+            <div class="type">${animal.type}</div>
+            <div class="decription">${animal.decription}</div>
+          </div>
+        </li>`);
+      }
+    });
   </script>
 
   <!--

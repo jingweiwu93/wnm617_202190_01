@@ -502,6 +502,9 @@ a{
   overflow:hidden;
   overflow-y: scroll;
 }
+ol.lbox {
+	padding: 0;
+}
 .lbox{
   width: 280px;
   margin: 0 auto;
