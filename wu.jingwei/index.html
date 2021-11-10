@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>The Owl</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Owl</title>
 
 
 <!-- Stylesheet -->
 
-	<link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
-	<link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+  <link rel="stylesheet" href="css/app.css">
 
 <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
@@ -18,24 +18,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
 
 
-	<script src="lib/js/jquery-2.2.4.min.js"></script>
-	
-	<script src="js/app.js"></script>
+  <script src="lib/js/jquery-2.2.4.min.js"></script>
+  
+  <script src="js/app.js"></script>
   <script src="js/functions.js"></script>
   <script src="js/pages.js"></script>
   <script src="js/parts.js"></script>
   <script src="js/signin.js"></script>
 
 
-	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+  <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-	
-	<!--Sign in-->
-	<section data-role="page" id="page-signin">
+  
+  <!--Sign in-->
+  <section data-role="page" id="page-signin">
 
-		<div data-role="main" class="display-flex flex-vertical">
-			<div class="flex-stretch"></div>
+    <div data-role="main" class="display-flex flex-vertical">
+      <div class="flex-stretch"></div>
       <div class="flex-col-center-center">
         <img class="owl-logo" src="./img/logo.png" alt="logo">
         <p class="slogan">The Owl</p>
@@ -43,22 +43,22 @@
       <div class="flex-stretch"></div>
         
       </div>
-			<form data-ajax="false" class="form signin-form" id="signin-form" style="padding:10px">
-				<div class="form-control">
-					<input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Username">
-				</div>
-				<div class="form-control">
-					<input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
-				</div>
-				<div class="form-control">
-					<input type="submit" value="Sign In" class="form-button" data-role="none">
-				</div>
+      <form data-ajax="false" class="form signin-form" id="signin-form" style="padding:10px">
+        <div class="form-control">
+          <input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Username">
+        </div>
+        <div class="form-control">
+          <input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
+        </div>
+        <div class="form-control">
+          <input type="submit" value="Sign In" class="form-button" data-role="none">
+        </div>
         <div class="form-control small centered">
           Need a new account? <a href="#page-signup">Sign Up</a>
         </div>
-			</form>
-		</div>
-	</section>
+      </form>
+    </div>
+  </section>
 
 
   <!--Sign up-->
@@ -90,11 +90,11 @@
     </div>
   </section>
 
-	<!--MAP-->
+  <!--MAP-->
 
-	<section data-role="page" id="page-recent">
-		<div data-role="main">
-			<div class="map"></div>
+  <section data-role="page" id="page-recent">
+    <div data-role="main">
+      <div class="map"></div>
 
       <div class="floater" style="top:20%;left:20%;">
         <a href="#" data-activate="#recent-add-modal"><img src="./img/icons/map.svg" class="icon" style="width:30px;height:30px"></a>
@@ -121,17 +121,17 @@
           <div class="modal-body">Body</div>
         </div>
       </div>
-		</div>
-		<footer data-role="footer">
-			<ul>
-				<li><a href="#page-recentwe">Recent</a></li>
-				<li><a href="#page-list">List</a></li>
-				<li><a href="#page-user-profile">Profile</a></li>
-			</ul>
-		</footer>
+    </div>
+    <footer data-role="footer">
+      <ul>
+        <li><a href="#page-recentwe">Recent</a></li>
+        <li><a href="#page-list">List</a></li>
+        <li><a href="#page-user-profile">Profile</a></li>
+      </ul>
+    </footer>
 
     
-	</section>
+  </section>
 
 -->
 
@@ -139,22 +139,57 @@
 
   <!--List-->
 
-	<section data-role="page" id="page-list">
-		<div data-role="main">
-      <div class="overscroll floater fill-parent">
-  			<div class="animallist"></div>
-  		
+  <section data-role="page" id="page-list">
+    <div data-role="main">
+      <div class="lbox_out">
+        <ol class="lbox">
+        </ol>
+      </div>
+     
+    </div>
+     <!-- <div class="overscroll floater fill-parent">
+        <div class="animallist"></div>
+      
       </div>
       <div class="floater bottom right">
         <a href="#page-animal-add" class="btn-circle">&plus;</a>
       </div>
-		</div>
- 
-		<footer data-role="footer" data-template="#footer-template"></footer>
+    </div> -->
 
-  </section>
+    <!-- NEW 
   
+    <ol class="lbox"></ol>-->
 
+ 
+    <footer data-role="footer" data-template="#footer-template"></footer>
+ 
+  </section>
+
+  <script>
+    window.onload = function () {
+            var url = "data/animals_data.json"
+            var request = new XMLHttpRequest();
+            request.open("get", url);
+            request.send(null);
+            request.onload = function () {
+                if (request.status == 200) {
+                    var json = JSON.parse(request.responseText);
+                    for(let i=0; i<json.length; i++){
+                      $(".lbox").append('<li class="card">\
+                        <div class="image"><img src="'+json[i].img+'" alt="'+json[i].name+'" width="100%"/></div>\
+                        <div class="text">\
+                          <div class="name">'+json[i].name+'</div>\
+                          <div class="type">'+json[i].type+'</div>\
+                          <div class="decription">'+json[i].decription+'</div>\
+                        </div>\
+                      </li>')
+                    }
+
+                }
+            }
+       }
+
+  </script>
 
   <!--
 
@@ -181,14 +216,14 @@
         </div>
       </form>
     </div>
-	</section>
+  </section>
 
 -->
 
 <!--User Profile-->
 
-	<section data-role="page" id="">
-		<header class="" data-role="header">
+  <section data-role="page" id="">
+    <header class="" data-role="header">
         <a class="flex-col-center-center back-icon-link" href="#" data-rel="back">
           <img class="icon-md icon" src="./img/icons/back-arrow.svg" alt="back"></a>
         <h1 class="profile-page-title">Profile</h1>
@@ -224,19 +259,19 @@
         </div>
       </div>
     </div>
-		<footer data-role="footer" data-template="#footer-template"></footer>
-	</section>
+    <footer data-role="footer" data-template="#footer-template"></footer>
+  </section>
 
 
 
 <!--Animal Profile-->
 
-	<section data-role="page" id="page-animal-profile">
-		<div data-role="main" class="display-flex flex-vertical">
-			<div class="animal-profile-top">
+  <section data-role="page" id="page-animal-profile">
+    <div data-role="main" class="display-flex flex-vertical">
+      <div class="animal-profile-top">
         <img src="https://everycat.org/wp-content/themes/everycat-theme/assets/img/placeholder.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
       </div>
-			<!--	<li><a href="#" data-rel="back">Back</a></li>-->
+      <!--  <li><a href="#" data-rel="back">Back</a></li>-->
 
       <div class="animal-profile-middle">
         <ul class="nav">
@@ -247,7 +282,7 @@
       <div class="animal-profile-bottom">
         <div class="map"></div>
       </div>
-		</div>
+    </div>
 
     <header data-role="header" class="floating-header">
       <ul>
