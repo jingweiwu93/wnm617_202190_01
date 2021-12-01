@@ -23,6 +23,16 @@ const makeUserProfile = (o) => `
 `;
 
 
+const makeAnimalProfile = (o) => `
+<div>
+   <h2>${o.name}</h2>
+   <div><strong>type</strong> ${o.type}</div>
+   <div><strong>breed</strong> ${o.breed}</div>
+   <div><strong>description</strong> <p>${o.description}</p></div>
+</div>
+`;
+
+
 const makeAnimalPopup = o => `
 <div class="display-flex animal-jump" data-id="${o.animal_id}">
    <div class="flex-none animal-popup-image">
@@ -99,10 +109,29 @@ ${FormControlInput({
 ${FormControlInput({
    namespace:namespace,
    name:"username",
-   displayname:"Type",
+   displayname:"Username",
    type:"text",
    placeholder:"Type The User Handle",
    value:o.username
-})}`;
+})}
+
+${FormControlInput({
+   namespace:namespace,
+   name:"email",
+   displayname:"Email",
+   type:"email",
+   placeholder:"Type The Email Address",
+   value:o.email
+})}
+`;
+
+
+const makeAnimalChoiceSelect = ({animals,name,chosen=0}) => `
+<select id="${name}">
+    ${templater(o=>`
+       <option value="${o.id}" ${o.id===chosen?'selected':''}>${o.name}</option>
+    `)(animals)}
+</select>
+`;
 
 console.log("parts.js loaded")

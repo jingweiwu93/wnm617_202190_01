@@ -24,6 +24,7 @@
   <script src="js/functions.js"></script>
   <script src="js/parts.js"></script>
   <script src="js/pages.js"></script>
+  <script src="js/forms.js"></script>
   <script src="js/maps.js"></script>
   <script src="js/signin.js"></script>
   <script src="js/app.js"></script>
@@ -168,7 +169,7 @@
              <a href="#page-user-edit">Update User Info</a>
           </li>
           <li>
-             <a href="#page-user-edit">Change Password</a>
+             <a href="#page-user-password">Change Password</a>
           </li>
           <li>
              <a href="#" class="js-logout">Logout</a>
@@ -183,7 +184,7 @@
        <ul>
           <li><a href="#" data-rel="back">Back</a></li>
           <li class="flex-stretch"></li>
-          <li><a href="#" data-rel="back">Save</a></li>
+          <li><a href="#" class="js-submituseredit">Save</a></li>
        </ul>
     </header>
     <div data-role="main">
@@ -197,6 +198,35 @@
        </form>
     </div>
  </section>
+
+<section data-role="page" id="page-user-edit-password">
+  <header data-role="header">
+     <h1>Edit Password</h1>
+     <ul>
+        <li><a href="#" data-rel="back">Back</a></li>
+        <li class="flex-stretch"></li>
+        <li><a href="#" class="js-submituserpassword">Save</a></li>
+     </ul>
+  </header>
+  <div data-role="main">
+
+     <form class="fill-parent display-flex flex-vertical" id="user-edit-password-form" data-ajax="false">
+        <div class="flex-stretch position-relative">
+           <div class="fill-parent overscroll position-absolute padding-md">
+              <div class="form-control">
+                 <label for="user-password-initial" class="form-label">Type Password</label>
+                 <input type="password" id="user-password-initial" class="form-input" data-role="none" placeholder="Type A New Password">
+              </div>
+              <div class="form-control">
+                 <label for="user-password-confirm" class="form-label">Confirm Password</label>
+                 <input type="password" id="user-password-confirm" class="form-input" data-role="none" placeholder="Confirm New Password">
+              </div>
+           </div>
+        </div>
+     </form>
+  </div>
+</section>
+
 
 
 
@@ -320,13 +350,20 @@
 
       <div class="animal-profile-middle">
         <ul class="nav">
-          <li>map</li>
+          <li class="active">map</li>
           <li>description</li>
         </ul>
       </div>
       <div class="animal-profile-bottom">
-        <div class="map"></div>
-        <div class="description"></div>
+        <div class="section active">
+           <div class="map"></div>
+           <div class="floater bottom right">
+              <a href="#page-location-set-location" class="btn-circle js-chooseanimal" data-setnavigateback="-2">&plus;</a>
+           </div>
+        </div>
+        <div class="section">
+           <div class="description"></div>
+        </div>
       </div>
     </div>
 
@@ -352,8 +389,8 @@
           <div class="fill-parent overscroll position-absolute padding-md">
               
             <div class="flex-none padding-md">
-              <!--<button type="submit" class="form-button">Save</button>-->
-              <a href="#page-list" class="form-button">Save</a>
+              <button type="submit" class="form-button">Save</button>
+               <!-- <a href="#page-list" class="form-button">Save</a> -->
             </div> 
           </div>
         </div>
@@ -369,17 +406,17 @@
        </ul>
     </header>
     <div data-role="main">
-       <form class="fill-parent display-flex flex-vertical" id="animal-edit-form" data-ajax="false">
-          <div class="flex-stretch position-relative">
-             <div class="fill-parent overscroll position-absolute padding-md">
-                
-             </div>
+      <form class="fill-parent display-flex flex-vertical" id="animal-edit-form" data-ajax="false">
+        <div class="flex-stretch position-relative">
+          <div class="fill-parent overscroll position-absolute padding-md">
+              
           </div>
-          <div class="flex-none padding-md">
-             <!-- <button type="submit" class="form-button">Save</button> -->
-             <a href="#page-list" class="form-button">Save</a>
-          </div>
-       </form>
+        </div>
+        <div class="flex-none padding-md">
+          <button type="submit" class="form-button">Save</button>
+          <!-- <a href="#page-list" class="form-button">Save</a> -->
+        </div>
+      </form>
     </div>
  </section>
 
@@ -393,8 +430,13 @@
         <li><a href="#page-location-set-location">Next</a></li>
       </ul>
     </header>
-    <div data-role="main">
-      Animal!
+     <div data-role="main" style="padding:1em">
+      <input type="hidden" id="location-animal-choice">
+      <div>
+        <a href="#page-animal-add">Make a new animal</a>
+      </div>
+      <p>Or</p>
+      <div class="form-select location-animal-choice-select"></div>
     </div>
   </section>
 
@@ -408,7 +450,9 @@
       </ul>
     </header>
     <div data-role="main">
-      Animal!
+      <input type="hidden" id="location-lat">
+      <input type="hidden" id="location-lng">
+      <div class="map"></div>
     </div>
   </section>
 
@@ -419,14 +463,17 @@
       <ul>
         <li><a href="#" data-rel="back">Back</a></li>
         <li class="flex-stretch"></li>
-        <li><a href="#" class="js-navigate-back">Save</a></li>
+        <li><a href="#" class="js-submitlocationform">Save</a></li>
       </ul>
     </header>
     <div data-role="main">
-      <form action="">
+      <form action="" style="padding:1em">
         <input type="hidden" id="location-navigateback" value="-3">
+        <div class="form-control">
+          <label for="location-description" class="form-label">Describe the animal</label>
+          <textarea id="location-description" class="form-input" data-role="none" placeholder="What did it look like?"></textarea>
+        </div>
       </form>
-      Animal!
     </div>
   </section>
 
