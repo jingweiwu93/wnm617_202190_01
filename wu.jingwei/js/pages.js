@@ -11,13 +11,13 @@ const resultQuery = async (options) => {
 }
 
 const ListPage = async() => {
-	let result = await resultQuery({
+	let animals = await resultQuery({
 		type:'animals_by_user_id',
 		params: [sessionStorage.userId]
 	});
-	console.log('ListPage result', result);
 
-	$("#page-list .animallist").html(makeAnimalList(result));
+
+	makeAnimalListSet(animals);
 }
 
 
@@ -92,7 +92,7 @@ const AnimalProfilePage = async() => {
 	});
 
 	let [animal] = animal_result;
-	$(".animal-profile-top img").attr("src",animal.img);
+	$(".animal-profile-top>img").attr("src",animal.img);
     $(".animal-profile-bottom .description").html(makeAnimalProfile(animal));	
 	let locations_result = await resultQuery({
 		type:'locations_by_animal_id',

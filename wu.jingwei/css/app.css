@@ -5,9 +5,13 @@
 	--color-neutral-dark: #555;
 
 	
-	--color-main-light: #f4a118;
+	/*--color-main-light: #f4a118;
 	--color-main-medium: #C8701A;
-	--color-main-dark: #7A6F44; 
+	--color-main-dark: #7A6F44; */
+
+	--color-main-light: #CADFDF;
+	--color-main-medium: #5CB7B6;
+	--color-main-dark: #7A6F44;
 
 
 	--color-black: #000;
@@ -29,7 +33,7 @@
 /* CSS RESETS */
 
 * {
-	border-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body{
@@ -39,7 +43,7 @@ body{
 /* CORE ELEMENTS */
 
 a{
-	color: inherit;
+	color: black;
 	text-decoration: none;
 	font-weight: bold;
 }
@@ -127,6 +131,8 @@ a{
 	position: relative;
 	overflow: hidden;
 }
+
+.header,
 [data-role="header"],
 [data-role="footer"] {
 	flex: none;
@@ -139,6 +145,7 @@ a{
 	overflow: hidden;
 }
 
+.header ul,
 [data-role="header"] ul,
 [data-role="footer"] ul {
 	display: flex;
@@ -154,11 +161,13 @@ a{
 	text-align: center;
 }
 
+.header a,
 [data-role="header"] a,
 [data-role="footer"] a {
 	display: block;
 }
 
+.header a,
 [data-role="header"] a {
 	padding: 0 1em;
 }
@@ -184,7 +193,7 @@ a{
 }
 
 .signin-form .form-input {
-	width: 90%;
+	width: 100%;
 	display: inline-block;
 	border: 1px solid var(--color-neutral-medium);
 	margin: 0;
@@ -195,7 +204,7 @@ a{
 }
 
 .form-input {
-	width: 90%;
+	width: 100%;
 	display: inline-block;
 	border-width: 0;
 	border-bottom: 1px solid var(--color-neutral-medium);
@@ -214,8 +223,8 @@ a{
 	width: 100%;
 	display: inline-block;
 	border-width: 0;
-	color: inherit;
-	background-color: var(--color-main-light);
+	color: white;
+	background-color: var(--color-main-medium);
 	margin: 0;
 	padding: 0.5em 1em;
 	border-radius: 0.3em;
@@ -271,6 +280,42 @@ a{
 	width: 100%;
 	height: 100%;
 }
+
+
+.hotdog {
+	padding: 0.5em 1em;
+	display: inline-flex;
+	width: 100%;
+	border-radius: 2em;
+	position: relative;
+}
+
+	.hotdog.white {
+		background-color: var(--color-white);
+	}
+
+	.hotdog.medium {
+		background-color: var(--color-neutral-light);
+	}
+	.hotdog input {
+		border-width: 0;
+		background-color: transparent;
+		border-radius: 0;
+		-webkit-appearance: none;
+		font: inherit;
+		color: inherit;
+		outline: 0;
+		flex: 1 1 auto;
+		padding: 0;
+		margin: 0;
+		line-height: 1;
+	}
+
+	.search-bar .hotdog {
+		height: 100%;
+	}
+
+
 
 
 /* GENERIC NAV */
@@ -504,9 +549,14 @@ a{
 }
 
 .list-item-container {
+	background-color: var(--color-white);
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+	margin-top: 1em;
+	margin-bottom: 1em;
 	padding: 1em 1em;
-	background-color: var(--color-neutral-light);
-	border-radius: 0;
+	overflow: hidden;
+	position: relative;	
+	border-radius: 0.5em;
 }
 
 .animallist-item-image-container img {
@@ -588,6 +638,7 @@ ol.lbox {
 .animal-profile-top {
 	flex: none;
 	height: 40vh;
+	position: relative;
 }
 
 
@@ -626,9 +677,49 @@ ol.lbox {
 	max-width: 50px;
 }
 
+.user-profile-image img {
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+
+.search-bar {
+	box-shadow: none;
+	z-index: 2;
+	padding: 0.2em 0.5em;
+
+}
+
+
+.filter-bar {
+	display: flex;
+	padding: 0 1em;
+	width: 100%;
+	overflow-x: auto;
+	flex-gap: 1em;
+}
+
+.filter-bar a{
+	color: black;
+}
 
 
 
+.image-picker.replace {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.image-picker.replace input {
+	display: none;
+}
 
 
 /* User Profile */

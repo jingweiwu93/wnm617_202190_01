@@ -313,4 +313,4 @@ const mapStyles = [
             }
         ]
     }
-]; 
+];

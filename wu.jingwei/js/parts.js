@@ -1,24 +1,23 @@
-
 const makeAnimalList = templater((o)=>`
 <div class="animallist-item">
-	<div class="flex-row-nowrap-start-center list-item-container animal-jump" data-id="${o.id}">
-	  <div class="flex-none animallist-item-image-container">
-	     <img class="animal-img-cover" src="${o.img}" alt="">
-	  </div>
-	  <p class="animallist-item-name">${o.name}</p>
-
-	</div>
+   <div class="flex-row-nowrap-start-center list-item-container animal-jump" data-id="${o.id}">
+     <div class="flex-none animallist-item-image-container">
+        <img class="animal-img-cover" src="${o.img}" alt="">
+     </div>
+     <p class="animallist-item-name">${o.name}</p>
+   </div>
 </div>
 `);
 
+
 const makeUserProfile = (o) => `
 <div class="user-profile-image">
-	<img src="${o.img}" alt="">
+   <img src="${o.img}" alt="">
 </div>
 <div>
-	<h2>${o.name}</h2>
-	<h3>&commat;${o.username}</h3>
-	<div><a href="#page-user-settings">Settings</a></div>
+   <h2>${o.name}</h2>
+   <h3>&commat;${o.username}</h3>
+   <div><a href="#page-user-settings">Settings</a></div>
 </div>
 `;
 
@@ -31,7 +30,6 @@ const makeAnimalProfile = (o) => `
    <div><strong>description</strong> <p>${o.description}</p></div>
 </div>
 `;
-
 
 const makeAnimalPopup = o => `
 <div class="display-flex animal-jump" data-id="${o.animal_id}">
@@ -114,7 +112,6 @@ ${FormControlInput({
    placeholder:"Type The User Handle",
    value:o.username
 })}
-
 ${FormControlInput({
    namespace:namespace,
    name:"email",
@@ -125,37 +122,32 @@ ${FormControlInput({
 })}
 `;
 
-
 const makeAnimalChoiceSelect = ({animals,name,chosen=0}) => `
 <select id="${name}">
-    ${templater(o=>`
-       <option value="${o.id}" ${o.id===chosen?'selected':''}>${o.name}</option>
-    `)(animals)}
+   ${templater(o=>`
+      <option value="${o.id}" ${o.id===chosen?'selected':''}>${o.name}</option>
+   `)(animals)}
 </select>
 `;
 
-
 const makeAnimalListSet = (arr,target="#page-list .animallist") => {
-
-	$(".fil").html(makeFilterList(arr));
-	$(target).html(makeAnimalList(arr));
+   $(".filter-bar").html(makeFilterList(arr));
+   $(target).html(makeAnimalList(arr));
 }
 
+const capitalize = s => s[0].toUpperCase()+s.substr(1);
 
 const filterList = (animals,type) => {
-	let a = [...(new Set(animals.map(o=>o[type])))];
-	return templater(o=>`<a href="#" data-filter="${type}" data-value="${o}">${o}</a>`)(a);
+   let a = [...(new Set(animals.map(o=>o[type])))];
+   return templater(o=>o?`<a href="#" data-filter="${type}" data-value="${o}">${capitalize(o)}</a>`:'')(a);
 }
 
-
-const makefilterList = (animals) => {
-	return `
-	<a href="#" data-filter="type" data-value="">ALL</a>
-    <div>|</div>
-    ${filterList(animals,'type')}
-    <div>|</div>
-    ${filterList(animals,'breed')}
-	`;
+const makeFilterList = (animals) => {
+   return `
+   <a href="#" data-filter="type" data-value="">All</a>
+   <div>|</div>
+   ${filterList(animals,'type')}
+   <div>|</div>
+   ${filterList(animals,'breed')}
+   `;
 }
-
-console.log("parts.js loaded")

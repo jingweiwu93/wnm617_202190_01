@@ -20,10 +20,10 @@ const animalAddForm = async () => {
 
 
 const animalEditForm = async () => {
-	let name =  $("animal-edit-name").val();
-	let type =  $("animal-edit-type").val();
-	let breed =  $("animal-edit-breed").val();
-	let description =  $("animal-edit-description").val();
+	let name = $("#animal-edit-name").val();
+	let type = $("#animal-edit-type").val();
+	let breed = $("#animal-edit-breed").val();
+	let description = $("#animal-edit-description").val();
 
 	let r = await query ({
 		type:'update_animal',
@@ -33,7 +33,6 @@ const animalEditForm = async () => {
 	if(r.error) throw(r.error);
 
 	history.go(-1);
-	
 }
 
 
@@ -98,3 +97,30 @@ const locationAddForm = async () => {
 
     history.go($("#location-navigateback").val());
 } 
+
+
+
+const checkSearchForm = async (s) => {
+	let animals = await query({
+		type:'search_animals',
+		params:[s,sessionStorage.userId]
+	});
+
+	if(animals.error) throw(animals.error);
+
+	makeAnimalListSet(animals.result);
+}
+
+
+const checkFilter = async (f,v) => {
+	let animals = await query({
+		type:'filter_animals',
+		params:[f,v,sessionStorage.userId]
+	});
+
+	if(animals.error) throw(animals.error);
+
+	makeAnimalListSet(animals.result);
+}
+
+
