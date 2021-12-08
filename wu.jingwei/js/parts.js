@@ -134,4 +134,28 @@ const makeAnimalChoiceSelect = ({animals,name,chosen=0}) => `
 </select>
 `;
 
+
+const makeAnimalListSet = (arr,target="#page-list .animallist") => {
+
+	$(".fil").html(makeFilterList(arr));
+	$(target).html(makeAnimalList(arr));
+}
+
+
+const filterList = (animals,type) => {
+	let a = [...(new Set(animals.map(o=>o[type])))];
+	return templater(o=>`<a href="#" data-filter="${type}" data-value="${o}">${o}</a>`)(a);
+}
+
+
+const makefilterList = (animals) => {
+	return `
+	<a href="#" data-filter="type" data-value="">ALL</a>
+    <div>|</div>
+    ${filterList(animals,'type')}
+    <div>|</div>
+    ${filterList(animals,'breed')}
+	`;
+}
+
 console.log("parts.js loaded")
