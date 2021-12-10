@@ -151,6 +151,7 @@ const LocationChooseAnimalPage = async() => {
            name:'location-animal-choice-select'
         })
     );
+    $("#location-animal-choice").val(result[0].id);
 } 
 
 console.log("pages.js loaded")

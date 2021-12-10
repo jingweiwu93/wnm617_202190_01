@@ -144,10 +144,8 @@ const filterList = (animals,type) => {
 
 const makeFilterList = (animals) => {
    return `
-   <a href="#" data-filter="type" data-value="">All</a>
-   <div>|</div>
+   <a href="#" class="filter-item" data-filter="type" data-value="">All</a>
+   
    ${filterList(animals,'type')}
-   <div>|</div>
-   ${filterList(animals,'breed')}
    `;
 }

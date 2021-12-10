@@ -28,43 +28,39 @@ $(()=>{
 			case "page-animal-add": AnimalAddPage(); break;
 			case "page-location-choose-animal": LocationChooseAnimalPage(); break;
          	case "page-location-set-location": LocationSetLocationPage(); break;
-
 		}
 	})
-
-
-
-
 
 	//FORM SUBMITS
 
 	.on("submit","#signin-form",function(e){
 		e.preventDefault();
 		checkSigninForm();
-
 	})
-	.on("submit","#list-add-form",function(e){
+
+	.on("submit","#signup-form",function(e){
 		e.preventDefault();
+		checkSignup();
+	})
+	.on("submit","#signup-form2",function(e){
+		e.preventDefault();
+		checkSignup2();
 	})
 
 	.on("submit", "#animal-add-form", function(e) {
-      e.preventDefault();
+	  e.preventDefault();
       animalAddForm();
     })
-    .on("submit", "#animal-edit-form", function(e) {
-      e.preventDefault();
-      animalEditForm();
-    })
-
-
+	.on("submit", "#animal-edit-form", function(e) {
+		e.preventDefault();
+		animalEditForm();
+	})
 
     .on("submit", "#list-search-form", function(e) {
       e.preventDefault();
       let s = $(this).find("input").val();
       checkSearchForm(s);
     })
-
-
 
     // FORM ANCHOR CLICKS
 
@@ -131,17 +127,11 @@ $(()=>{
     	})
     })
 
+    // ON CHANGE
 
-
-   // ON CHANGE
-
-   .on("change","#location-animal-choice-select",function(e){
-      $("#location-animal-choice").val(this.value)
-   })
-
-
-
-
+	.on("change","#location-animal-choice-select",function(e){
+		$("#location-animal-choice").val(this.value)
+	})
 
 	//ANCHOR CLICKS
 	.on("click",".js-logout",function(e){
@@ -176,9 +166,6 @@ $(()=>{
 			.siblings().removeClass("active");
 	})
 
-
-
-
 	.on("click","[data-activate]",function(e){
 		let target = $(this).data("activate");
 		$(target).addClass("active");
@@ -208,7 +195,4 @@ $(()=>{
 		"#page-list":".nav-icon-set li:nth-child(2)",
 		"#page-user-profile":".nav-icon-set li:nth-child(3)",
 	}[location.hash]).addClass("active");
-
-
-
 });

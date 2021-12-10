@@ -1,17 +1,19 @@
 
 :root {
-	--color-neutral-light: #efce9e;
-	--color-neutral-medium: #C8701A;
-	--color-neutral-dark: #555;
+	--color-neutral-light: #99D4FF;
+	--color-neutral-medium: #419EF3;
+	--color-neutral-dark:;
 
 	
 	/*--color-main-light: #f4a118;
 	--color-main-medium: #C8701A;
 	--color-main-dark: #7A6F44; */
 
-	--color-main-light: #CADFDF;
-	--color-main-medium: #5CB7B6;
-	--color-main-dark: #7A6F44;
+	--color-main-light: #FEE9C3;
+	--color-main-medium1: #F9BE03;
+	--color-main-medium2: #F9A20C;
+	--color-main-dark1: #C8701A;
+	--color-main-dark2: #603910;
 
 
 	--color-black: #000;
@@ -140,7 +142,7 @@ a{
 	line-height: var(--header-height);
 	border-width: 0;
 	background-color: var(--color-white);
-	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+	box-shadow: 5px 5px 6px 0.5px rgba(249,162,12,0.1);
 	position: relative;
 	overflow: hidden;
 }
@@ -170,6 +172,8 @@ a{
 .header a,
 [data-role="header"] a {
 	padding: 0 1em;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 
@@ -207,13 +211,16 @@ a{
 	width: 100%;
 	display: inline-block;
 	border-width: 0;
-	border-bottom: 1px solid var(--color-neutral-medium);
+	border-bottom: 1px solid var(--color-main-medium1);
 	margin: 0;
 	padding: 0.5em 1em;
-	/*border-radius: 0.3em;*/
+	border-radius: 1em;
 	outline: 0;
 	background-color: transparent;
-	font: inherit;  
+	font-family: 'Sofia Pro', sans-serif;  
+	font-weight: 250;  
+	font-size: 16px; 
+	color: gray;                                          
 	-webkit-appearance: none;
 }
 
@@ -224,10 +231,10 @@ a{
 	display: inline-block;
 	border-width: 0;
 	color: white;
-	background-color: var(--color-main-medium);
-	margin: 0;
+	background-color: var(--color-main-medium2);
+	margin: 0;ß
 	padding: 0.5em 1em;
-	border-radius: 0.3em;
+	border-radius: 1.5em;
 	outline: 0;
 	font: inherit;
 	text-align: center;
@@ -295,26 +302,51 @@ a{
 	}
 
 	.hotdog.medium {
-		background-color: var(--color-neutral-light);
+		background-color: var(--color-white);
 	}
 	.hotdog input {
+		font-family: 'Gilroy-Regular', sans-serif;
+		font-size: 18px;
 		border-width: 0;
 		background-color: transparent;
 		border-radius: 0;
 		-webkit-appearance: none;
-		font: inherit;
 		color: inherit;
 		outline: 0;
 		flex: 1 1 auto;
 		padding: 0;
 		margin: 0;
 		line-height: 1;
+		opacity:40%;
+	}
+
+	.search-bar.header {
+		flex: none;
+		height: var(--header-height);
+		line-height: var(--header-height);
+		border-width: 0;
+		background-color: var(--color-main-medium2);
+		position: relative;
+		overflow: hidden;
+		margin-top:1em;
 	}
 
 	.search-bar .hotdog {
 		height: 100%;
 	}
 
+    .category {
+		font-family: 'Gilroy-Bold', sans-serif;
+		font-size:16px;
+		color:var(--color-white);
+		margin: 0.5em 1em;
+		display:inline-block;
+	}
+
+
+	.head-head {
+		background-color: var(--color-main-medium2);
+	}
 
 
 
@@ -349,10 +381,10 @@ a{
 .btn-circle {
 
 	display: inline-block;
-	background-color: var(--color-main-light);
-	width: 3rem;
-	height: 3rem;
-	line-height: 3rem;
+	background-color: var(--color-main-medium2);
+	width: 3.5rem;
+	height: 3.5rem;
+	line-height: 4rem;
 	text-align: center;
 	font-size: 1.8rem;
 	border-radius: 2em;
@@ -489,6 +521,12 @@ a{
 	display: inline-block;
 }
 
+.icon-search {
+	width: 1.4em;
+	height: 1.4em;
+	margin-right: 1em;
+	margin-top:0.1em;
+}
 
 .nav-icon {
 	display: block;
@@ -697,14 +735,22 @@ ol.lbox {
 	padding: 0 1em;
 	width: 100%;
 	overflow-x: auto;
-	flex-gap: 1em;
+	gap: 1em;
+	background-color:var(--color-main-medium2);
 }
 
 .filter-bar a{
-	color: black;
+	color: #4f4f4f;
+	font-family: 'Sofia Pro', sans-serif;
+	font-weight: 450;                                        
+	
 }
 
-
+.filter-item {
+	background-color:var(--color-main-light);
+	padding: 1.5em;
+	border-radius: 5px;
+}
 
 .image-picker.replace {
 	position: absolute;
@@ -720,6 +766,28 @@ ol.lbox {
 .image-picker.replace input {
 	display: none;
 }
+
+
+.thumbnail {
+  position:relative;
+  display:inline-block;
+  width:6em;
+  height:6em;
+  border-radius:0.6em;
+  border:0.25em solid white;
+  vertical-align:middle;
+  box-shadow:0 0.15em 0.35em 0.1em rgba(0,0,0,0.2);
+  margin:0.5em;
+  
+  background-position:center;
+  background-size:cover;
+}
+.thumbnail input {
+   display: none;
+}
+
+
+ƒ
 
 
 /* User Profile */
