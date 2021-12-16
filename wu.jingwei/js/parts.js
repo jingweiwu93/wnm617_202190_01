@@ -32,9 +32,9 @@ const makeUserProfile = (user, animals) => `
 const makeAnimalProfile = (o) => `
 <div>
    <h2 class="the-real-name">${o.name}</h2>
-
+   <div class="the-user-name">${o.type}</div>
    <div class="the-user-name">${o.breed}</div>
-   <div><p class="the-animal-description">${o.description}</p></div>
+   <div><p class="the-user-name">${o.description}</p></div>
 </div>
 `;
 
