@@ -171,6 +171,17 @@ function makeStatement($data) {
 
          /* UPDATE */
 
+         case "update_user_onboard":
+            $r = makeQuery($c,"UPDATE
+               `track_users`
+               SET
+                  `name` = ?,
+                  `img` = ?
+               WHERE `id` = ?
+               ",$p,false);
+            return ["result" => "success"];                    
+
+
          case "update_user":
             $r = makeQuery($c,"UPDATE
                `track_users`

@@ -86,7 +86,7 @@
         </div>
         <div class="form-control">
           <label for="signup-username" class="form-label">Username</label>
-          <input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Email">
+          <input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Username">
         </div>
         <div class="form-control">
           <label for="signup-password" class="form-label">New Password</label>
@@ -94,7 +94,7 @@
         </div>
         <div class="form-control">
           <label for="signup-password2" class="form-label">Confirm Password</label>
-          <input class="form-input" type="password" id="signup-password2" data-role="none" placeholder="Password">
+          <input class="form-input" type="password" id="signup-password2" data-role="none" placeholder="Confirm Password">
         </div>
         <div class="form-control">
           <input type="submit" value="Sign Up" class="form-button" data-role="none">
@@ -117,6 +117,7 @@
           <input class="form-input" type="text" id="signup-name" data-role="none" placeholder="Name">
         </div>
         <div class="form-control">
+          <span class="avatar-hint">Upload Avatar Here</span>
           <input type="hidden" id="signup-image-name">
           <label class="image-picker thumbnail">
             <input type="file" data-role="none">
@@ -138,7 +139,7 @@
 
 
       <div class="floater bottom right">
-        <a href="#page-location-choose-animal" class="btn-circle" data-setnavigateback="-3">&plus;</a>
+        <a href="#page-location-choose-animal" class="btn-circle"><svg t="1639090655669" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5633" width="64" height="64"><path d="M544.256 480.256h307.2a32.256 32.256 0 0 1 0 64h-307.2v307.2a32.256 32.256 0 0 1-64 0v-307.2h-307.2a32.256 32.256 0 1 1 0-64h307.2v-307.2a32.256 32.256 0 1 1 64 0z" p-id="5634" fill="#ffffff"></path></svg></a>
       </div>
       <div id="recent-drawer" class="modal">
         <div class="modal-back transparent" data-deactivate="#recent-drawer"></div>
@@ -189,7 +190,8 @@
 
  <section data-role="page" id="page-user-settings">
     <header data-role="header">
-       <h1>User Edit</h1>
+       <h1>Settings</h1>
+       
        <ul>
           <li><a href="#" data-rel="back">Back</a></li>
        </ul>
@@ -401,7 +403,7 @@
       </div>
     </div>
     <footer data-role="footer" data-template="#footer-template"></footer>
-  </section>
+  </section>-->
 
 
 
@@ -424,15 +426,14 @@
 
       <div class="animal-profile-middle">
         <ul class="nav">
-          <li class="active">map</li>
-          <li>description</li>
+          <li class="active description-title">Map</li>
+          <li class="description-title">Description</li>
         </ul>
       </div>
       <div class="animal-profile-bottom">
         <div class="section active">
            <div class="map"></div>
            <div class="floater bottom right">
-              <a href="#page-location-set-location" class="btn-circle js-chooseanimal" data-setnavigateback="-2"><svg t="1639090655669" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5633" width="64" height="64"><path d="M544.256 480.256h307.2a32.256 32.256 0 0 1 0 64h-307.2v307.2a32.256 32.256 0 0 1-64 0v-307.2h-307.2a32.256 32.256 0 1 1 0-64h307.2v-307.2a32.256 32.256 0 1 1 64 0z" p-id="5634" fill="#ffffff"></path></svg></a>
            </div>
         </div>
         <div class="section">
@@ -443,7 +444,7 @@
 
     <header data-role="header" class="floating-header">
       <ul>
-        <li><a href="#" data-rel="back"><img class="icon-md icon" src="./img/icons/back-arrow.svg" alt="back"></a></li>
+        <li><a href="#" data-rel="back" class="ui-icon ui-link">Back</a></li>
         <li class="flex-stretch"></li>
         <li><a href="#page-animal-edit">Edit</a></li>
       </ul>

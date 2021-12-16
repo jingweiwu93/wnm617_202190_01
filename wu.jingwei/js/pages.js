@@ -65,10 +65,14 @@ const UserProfilePage = async() => {
 	let result = await resultQuery({
 		type:'user_by_id',
 		params:[sessionStorage.userId]
-	});
+   });
+   let animals = await resultQuery({
+      type: 'animals_by_user_id',
+      params: [sessionStorage.userId],
+   })
 
-	let [user] = result;
-	$("#page-user-profile [data-role='main']").html(makeUserProfile(user));
+   let [user] = result;
+	$("#page-user-profile [data-role='main']").html(makeUserProfile(user, animals));
 }
 
 const UserEditPage = async() => {

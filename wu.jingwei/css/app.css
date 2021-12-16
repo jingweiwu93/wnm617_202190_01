@@ -185,8 +185,11 @@ a{
 	height: 100%;
 	text-align: center;
 	margin: 0;
-	font-size: 1rem;
 	padding: 0;
+	font-family: 'Sofia Pro', sans-serif;  
+	font-size:1.2em;
+	font-weight:300;
+	
 }
 
 
@@ -199,12 +202,15 @@ a{
 .signin-form .form-input {
 	width: 100%;
 	display: inline-block;
-	border: 1px solid var(--color-neutral-medium);
+	border: 1.6px solid var(--color-main-dark1);
 	margin: 0;
-	padding: 0.5em 1em;
-	border-radius: 0.3em;
+	padding: 0.8em 1em;
+	border-radius: 0.5em;
 	outline: 0;
-	font: inherit;
+	font-family: 'Sofia Pro', sans-serif;  
+	font-weight: 250;  
+	font-size: 16px; 
+	color: grey;
 }
 
 .form-input {
@@ -213,14 +219,14 @@ a{
 	border-width: 0;
 	border-bottom: 1px solid var(--color-main-medium1);
 	margin: 0;
-	padding: 0.5em 1em;
+	padding: 0.8em 1em;
 	border-radius: 1em;
 	outline: 0;
 	background-color: transparent;
 	font-family: 'Sofia Pro', sans-serif;  
 	font-weight: 250;  
 	font-size: 16px; 
-	color: gray;                                          
+	color:grey;                                     
 	-webkit-appearance: none;
 }
 
@@ -232,8 +238,8 @@ a{
 	border-width: 0;
 	color: white;
 	background-color: var(--color-main-medium2);
-	margin: 0;ß
-	padding: 0.5em 1em;
+	margin: 0;
+	padding: 0.8em 1em;
 	border-radius: 1.5em;
 	outline: 0;
 	font: inherit;
@@ -250,7 +256,7 @@ a{
 }
 
 .form-select select {
-    background-color: var(--color-neutral-light);
+    background-color: var(--color-main-medium1);
     border-width: 0;
     padding: 0.5em 1em;
     font: inherit;
@@ -274,11 +280,20 @@ a{
 /* Login */
 
 .owl-logo {
-	width: 6em;
+	width: 7em;
 	margin: auto;
 }
 
+.slogan {
+	color:var(--color-main-dark1);
+	font-size: 1.2em;
+	font-family: 'Gilroy-Bold', sans-serif;
 
+}
+
+.ui-icon {
+	color:var(--color-main-dark2);
+}
 
 .map {
 	position: absolute;
@@ -510,9 +525,17 @@ a{
 	flex: 1 1 100%;
 }
 
+.ui-link {
+	font-family:'Sofia Pro', sans-serif;
+	font-size: 1.2em;
+	color: var(--color-main-dark2);
+}
 
-
-
+.avatar-hint {
+	font-size: 0.9em;
+    color: var(--color-neutral-medium);
+    margin: 1rem 0 0;
+}
 
 
 .icon {
@@ -698,7 +721,7 @@ ol.lbox {
 
 .floating-header {
 	position: absolute;
-	background-color: rgba(255, 255, 255, 0.15);
+	background-color: rgba(255, 255, 255, 0.5);
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -722,6 +745,32 @@ ol.lbox {
 }
 
 
+.the-real-name {
+	font-family: 'Sofia Pro', sans-serif;
+	font-weight: 450;                                        
+	line-height: 2em;
+	text-align: center;
+}
+.the-user-name, .the-email, .the-num-animals {
+	font-family: 'Sofia Pro', sans-serif;
+	font-weight: 450;                                        
+	line-height: 1em;
+	text-align: center;
+}
+.description-title {
+	font-family: 'Sofia Pro', sans-serif;
+	font-weight: 550;                                        
+	line-height: 2em;
+	text-align: center;
+}
+
+.the-animal-description {
+	font-family: 'Sofia Pro', sans-serif;
+	font-weight: 250;                                        
+	line-height: 1.3em;
+	text-align: center;	
+}
+
 .search-bar {
 	box-shadow: none;
 	z-index: 2;
@@ -739,16 +788,12 @@ ol.lbox {
 	background-color:var(--color-main-medium2);
 }
 
-.filter-bar a{
+.filter-bar a {
 	color: #4f4f4f;
 	font-family: 'Sofia Pro', sans-serif;
 	font-weight: 450;                                        
-	
-}
-
-.filter-item {
+	line-height: 2em;
 	background-color:var(--color-main-light);
-	padding: 1.5em;
 	border-radius: 5px;
 }
 
